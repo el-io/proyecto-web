@@ -1,0 +1,164 @@
+/* Estilos generales */
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Encabezado */
+
+header {
+	background-color: #333333;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+    ;
+}
+
+.navbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.navbar-brand {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav-item {
+	margin-left: 20px;
+}
+
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Secciones */
+
+section {
+	padding: 80px 0;
+}
+
+section h1 {
+	margin: 0 0 20px 0;
+	font-size: 48px;
+	line-height: 1.2;
+}
+
+section p {
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+.list-group {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-group-item {
+	flex-basis: calc(33.33% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+}
+
+.list-group-item:last-child {
+	margin-right: 0;
+}
+
+/* Equipo */
+
+.team-member {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.team-member img {
+	border-radius: 50%;
+}
+
+.team-member h3 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 24px;
+}
+
+.team-member p {
+	margin: 0;
+	font-size: 18px;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+	.container {
+		padding: 0 10px;
+	}
+	.navbar-brand {
+		font-size: 20px;
+	}
+	.navbar-nav {
+		flex-basis: 100%;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.nav-item {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.list-group-item {
+		flex-basis: calc(50% - 20px);
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		padding: 40px;
+	}
+	.navbar-brand {
+		font-size: 32px;
+	}
+	.nav-item {
+		margin-left: 30px;
+		margin-right: 0;
+	}
+	.list-group-item {
+		flex-basis: calc(25% - 20px);
+	}
+}
