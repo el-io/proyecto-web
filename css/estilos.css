@@ -3,13 +3,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
-    font-size: 16px;
+    font-size: 0.7rem;
 }
 
 a {
@@ -28,27 +29,38 @@ ul {
 
 /*Navegacion*/
 .nav-main {
-    font-size: 17px;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding: 20px 0;
+    height: 5rem;
+    padding: 1rem 0;
     
 }
 
 .nav-brand {
     width: auto;
-    margin-left: 50px;
-    padding-top: 10px;
+    margin-left: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+.nav-brand h1 {
+  font-size: 2rem;
 }
 
 /*Nav left*/
 .nav-main ul {
-    display: flex;
+    
     margin-left: auto;
-    padding-top: 10px;
+    padding-top: 0.5rem;
+   
 }
+@media (min-width: 768px) {
+    .nav-main ul {
+        display: flex; 
+     
+    }
+  }
 
 .nav-main ul.navbar-nav {
     margin-left: auto; /* Alinear a la derecha */
@@ -56,20 +68,21 @@ ul {
   
 
 .nav-main ul li {
-    padding: 10px;
+    padding: 1rem;
 }
 
 .nav-main ul li a {
-    padding: 2px;
+    padding: 0.3rem;
 }
 
+/*Animacion*/
 .nav-main ul li a:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 0.2rem solid white;
 }
 
 .nav-main ul.nav-menu-right {
     
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 div {
@@ -90,7 +103,7 @@ div {
 }
 
 .showcase h2 {
-    font-size: 25px;
+    font-size: 2rem;
     padding-bottom: 10px;
 }
 
@@ -109,14 +122,14 @@ div {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: #FEDBD0;
+    background-color: #8B4513;
 
 }
 
 .banner-one .content {
     text-align: center;
     width: 50%;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,90 +138,171 @@ div {
 
 .banner-one .content h2 {
     max-width: 400px;
-    padding-bottom: 40px;
-    font-size: 40px;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .banner-one .content p {
     max-width: 500px;
-    line-height: 1.5;
+    line-height: 1.5rem;
 }
 
 .banner-one .content a {
-    padding: 20px
+    padding: 1rem
 }
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #e89f7b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #f7c9b5;
+}
+
 
 /*CARDS*/
 .card-one {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 300px 20px 300px;
-    background-color: #7c6451;
+    gap: 1.5rem;
+    padding: 0 5rem 1rem 5rem;
+    background-color: hsl(0deg 0% 100%);
+    color: #0a0a0a;
 }
 
 .card-one>h1 {
     grid-column: 1 / -1;
-    font-size: 40px;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1rem;
 }
 
 .card-one img {
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
 }
+
 
 .card-one h3 {
-    font-size: 20px;
+    font-size: 1rem;
+    text-align: center;
 }
 
-.card-one p {
-    line-height: 1.5;
-}
 
-/*CARD-TWO*/
+@media (max-width: 768px) {
+    .card-one  {
+      grid-template-columns: 1fr;
+      /* Una sola columna en dispositivos móviles */
+      grid-template-rows: auto;
+      /* Altura automática */
+      padding: 0 0.5rem;
+    }
+  }
+
 .banner-two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    background: url("../img/store1.jpg") no-repeat left center/contain;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
     background-color: #c4d5cf;
     padding: 20px;
     text-align: center;
-    color: #fff;
-    padding-left: 500px;
-}
-
-.banner-two .content {
+    color:#323a37 ;
+  }
+  
+  .banner-two .content {
+    grid-row: 1;
+    grid-column: 1;
     text-align: center;
-    width: 60%;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 2.0);
-
-}
-
-
-.banner-two .content h2 {
-    padding-bottom: 50px;
+  }
+  
+  .banner-two .content h2 {
+    padding-bottom: 20px;
     font-size: 30px;
-}
-
-.banner-two .content p {
+  }
+  
+  .banner-two .content p {
     padding-bottom: 20px;
     font-size: 18px;
     line-height: 1.5;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 2.0);
-
-}
+  }
+  .banner-two .content a {
+    font-size: 1rem;
+    color:#0a0a0a
+  }
+  
+  .banner-two .image {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-two .image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+   @media (min-width: 768px) {
+    .banner-two {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .banner-two .content {
+      grid-row: 1;
+      grid-column: 2;
+      text-align: left;
+    }
+  
+    .banner-two .image {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  } 
+  
+  @media (max-width: 767px) {
+    .banner-two {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .banner-two .content {
+      grid-row: 1;
+      grid-column: 1;
+      align-self: center;
+    }
+  
+    .banner-two .image {
+      grid-row: 2;
+      grid-column: 1;
+      align-self: center;
+    }
+  
+    .banner-two .image img {
+      width: 30%;
+      max-width: 300px;
+    }
+  }
+  
 
 .productos {
     background-color: #f1eee8;
@@ -237,36 +331,63 @@ div {
 
 /*FORMULARIO*/
 
+.grid-container {
+    display: grid;
+    color: white;
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-rows: auto auto;
+    grid-gap: 40px;
+    
+  }
+
+.grid-container h1 {
+  text-align: center;
+}
+
+   
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      width: 80%;
+    }
+  }
+
 form {
-    background-color: #fff;
-    padding: 20px;
+    background-color: black;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(99, 95, 95, 0.1);
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    padding: 1rem;
+
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 2rem;
   }
   
   label {
-    display: block;
+    display: block; 
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-top: 2rem;
+    color: white;
   }
   
   input[type="text"],
   input[type="email"],
+  
   textarea {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
   }
   
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: gray;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
@@ -274,5 +395,174 @@ form {
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #333333;
   }
+
+/* Estilos del contenedor del mapa */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.map-container p {
+  margin: 10px 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 510px;
+  height: 130px;
+  border: 0;
+  margin: 10px 0;
+}
+
+/* Menu Desplegable */
+ .dropdown {
+  position: relative;
+  margin-right: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:black;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(77, 76, 76, 0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {background-color: black;} 
+
+.dropdown:hover .dropdown-content {display: block;}
+header {
+  position: absolute;
+  
+} 
+
+/* estilo de la pagina de producto */
+.productos {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas con el mismo ancho */
+    grid-template-rows: auto auto;
+    /* Dos filas con altura automática */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    text-align: center;
+    /* Centrar el contenido horizontalmente */
+    padding: 0 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .productos {
+      grid-template-columns: 1fr;
+      /* Una sola columna en dispositivos móviles */
+      grid-template-rows: auto;
+      /* Altura automática */
+      padding: 0 10px;
+    }
+  }
+  
+  .productos h1 {
+    grid-column: 1 / -1;
+    /* El título ocupa todas las columnas disponibles */
+    justify-self: center;
+    /* Centrar el título horizontalmente */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  
+  .productos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    
+  }
+  .productos div img {
+    width: 50%;
+  }
+
+/*ESTILOS ABOUT*/
+#about {
+  background-color: #333;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Opcional: Estilos adicionales para resaltar el contenido */
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  margin: 20px auto;
+}
+
+.about-text p:first-of-type {
+  font-weight: bold;
+}
+
+
+/*FOOTER*/
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links .icons {
+  display: flex;
+  justify-content: center;
+}
+
+.links .icons a {
+  margin: 0 5px;
+}
+
+.links .icons a i {
+  font-size: 24px;
+}
+
+.links h3 {
+  margin-top: 10px;
+  text-align: center;
+}

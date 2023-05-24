@@ -7,41 +7,44 @@ const messageInput = document.getElementById('message');
 // Función de validación
 function validateForm(event) {
   event.preventDefault(); // Prevenir envío del formulario
-  
+
+  // Variable para almacenar los mensajes de error
+  let errorMessages = '';
+
   // Limpiar mensajes de error
   const errorElements = document.getElementsByClassName('error');
   for (let i = 0; i < errorElements.length; i++) {
     errorElements[i].textContent = '';
   }
-  
+
   // Validar nombre
   if (nameInput.value.trim() === '') {
-    document.getElementById('name-error').textContent = 'Ingrese su nombre';
+    errorMessages += 'Ingrese su nombre\n';
     nameInput.focus();
-    return false;
   }
-  
+
   // Validar email
   if (emailInput.value.trim() === '') {
-    document.getElementById('email-error').textContent = 'Ingrese su email';
+    errorMessages += 'Ingrese su email\n';
     emailInput.focus();
-    return false;
   } else if (!isValidEmail(emailInput.value.trim())) {
-    document.getElementById('email-error').textContent = 'Ingrese un email válido';
+    errorMessages += 'Ingrese un email válido\n';
     emailInput.focus();
-    return false;
   }
-  
+
   // Validar mensaje
   if (messageInput.value.trim() === '') {
-    document.getElementById('message-error').textContent = 'Ingrese un mensaje';
+    errorMessages += 'Ingrese un mensaje\n';
     messageInput.focus();
-    return false;
   }
-  
-  // Enviar formulario si todo es válido
-  alert('¡Formulario enviado con éxito!');
-  form.reset();
+
+  // Mostrar mensajes de error en una alerta
+  if (errorMessages !== '') {
+    alert(errorMessages);
+  } else {
+    // Enviar formulario si todo es válido
+    form.submit();
+  }
 }
 
 // Función para validar el formato del email

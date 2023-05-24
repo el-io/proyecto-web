@@ -8,18 +8,15 @@ Este es un proyecto de página web onepage para una tienda de alfajores.
 
 proyecto/  
 ├── index.html  
-├── pages  
-│   ├── about.html  
-│   ├── contact.html  
-│   ├── products.html  
-│   └── index.html  
+│── about.html  
+│── contacto.html  
+│── productos.html  
 ├── README.md  
 ├── css/  
-│   ├── styles.css  
-│   └── (otros archivos .css)  
+│   ├── estilos.css
 ├── js/  
-│   ├── app.js  
-│   └── (otros archivos .js)  
+│   ├── js.js
+│   └── validacion.js  
 ├── img/  
 │   ├── (imágenes del sitio)  
 │   └── (otros recursos multimedia)  
