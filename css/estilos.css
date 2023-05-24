@@ -417,6 +417,7 @@ form {
   height: 130px;
   border: 0;
   margin: 10px 0;
+  transform: scale(1.5, 1);
 }
 
 /* Menu Desplegable */
